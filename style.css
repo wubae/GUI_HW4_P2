@@ -1,0 +1,212 @@
+/*
+Name: Wu Li
+Date: 11/20/2024
+File: style.css
+
+Wu Li, UMass Lowell Computer Science, wuhui_li@student.uml.edu
+Copyright (c) 2024 by Wu. All rights reserved. May be freely copied or 
+excerpted for educational purposes with credit to the author.
+*/
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;600&family=Merriweather:wght@400;700&display=swap');
+
+/* Body font (primary font) */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title styling with a bold serif font */
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Form labels in a light sans-serif */
+label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+/* Form inputs with underline styling and same font as body */
+input[type="number"] {
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    padding: 5px;
+    width: 100px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+input[type="number"]:focus {
+    border-bottom: 2px solid #007BFF;
+}
+
+/* Form layout with centered button */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+button {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+    /* Smooth transition for hover effect */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for button */
+button:hover {
+    /* Green color on hover */
+    background-color: #28a745;
+}
+
+/* Container for the scrollable table */
+.table-container {
+    /* Ensures the container doesn't exceed the viewport width */
+    max-width: 100%;
+    /* Adjusts the height to 80% of the viewport height */
+    max-height: 80vh;
+    /* Enables scrolling when content overflows */ 
+    overflow: auto;
+    position: relative;
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    width: max-content;
+}
+
+/* Header row styling */
+thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: white;
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    min-width: 70px;
+    font-size: 16px;
+}
+
+/* Header column styling */
+tbody th {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    min-width: 70px;
+    font-size: 16px;
+}
+
+/* Top-left header cell */
+thead th:first-child {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: white;
+}
+
+/* Data cell styling */
+tbody td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    min-width: 70px;
+    font-size: 16px;
+}
+
+/* Error message styling */
+#error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Looping rainbow colors every 10 columns, adjusted for first th in each row */
+tbody tr td:nth-child(10n + 1) { background-color: #FFDDC1; } /* Light orange */
+tbody tr td:nth-child(10n + 2) { background-color: #FFECB3; } /* Light yellow */
+tbody tr td:nth-child(10n + 3) { background-color: #C8E6C9; } /* Light green */
+tbody tr td:nth-child(10n + 4) { background-color: #BBDEFB; } /* Light blue */
+tbody tr td:nth-child(10n + 5) { background-color: #D1C4E9; } /* Light purple */
+tbody tr td:nth-child(10n + 6) { background-color: #F8BBD0; } /* Light pink */
+tbody tr td:nth-child(10n + 7) { background-color: #FFCDD2; } /* Light red */
+tbody tr td:nth-child(10n + 8) { background-color: #E1BEE7; } /* Soft violet */
+tbody tr td:nth-child(10n + 9) { background-color: #C5CAE9; } /* Light indigo */
+tbody tr td:nth-child(10n + 10) { background-color: #B2EBF2; } /* Light cyan */
+
+/* Ensure slider containers display properly */
+div[id^="slider-"] {
+    width: 300px; /* Set desired slider width */
+    height: 8px; /* Ensure the height is consistent */
+    margin: 10px 0;
+    position: relative;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Slider handle styling */
+.ui-slider-handle {
+    width: 18px;
+    height: 18px;
+    background-color: #007BFF; /* Handle color */
+    border: 1px solid #007BFF; /* Handle border */
+    border-radius: 50%; /* Rounded handle */
+    cursor: pointer;
+    position: absolute;
+    top: -6px; /* Center the handle */
+}
+
+/* Style the tabs container */
+#tabs {
+    margin-top: 20px;
+}
+
+/* Style the close icon for each tab */
+.ui-icon-close {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Multiplication table in tabs */
+.multiplication-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.multiplication-table th,
+.multiplication-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}

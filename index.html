@@ -1,0 +1,71 @@
+<!--
+Name: Wu Li
+Date: 11/20/2024
+File: index.html
+
+Wu Li, UMass Lowell Computer Science, wuhui_li@student.uml.edu
+Copyright (c) 2024 by Wu. All rights reserved. May be freely copied or 
+excerpted for educational purposes with credit to the author.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Multiplication Table</title>
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Dynamic Multiplication Table Generator</h1>
+
+    <!-- Form for table parameters -->
+    <form id="table-form">
+        <label for="min-column">Minimum Column:</label>
+        <input type="number" id="min-column" name="minColumn" min="-50" max="50" value="0" required>
+        <div id="slider-min-column"></div>
+    
+        <label for="max-column">Maximum Column:</label>
+        <input type="number" id="max-column" name="maxColumn" min="-50" max="50" value="10" required>
+        <div id="slider-max-column"></div>
+    
+        <label for="min-row">Minimum Row:</label>
+        <input type="number" id="min-row" name="minRow" min="-50" max="50" value="0" required>
+        <div id="slider-min-row"></div>
+    
+        <label for="max-row">Maximum Row:</label>
+        <input type="number" id="max-row" name="maxRow" min="-50" max="50" value="10" required>
+        <div id="slider-max-row"></div>
+    </form>
+
+    <!-- Error message container -->
+    <div id="error-message" style="color: red;"></div>
+
+    <!-- Buttons -->
+    <button id="generate-table" type="button">Generate Table</button>
+    <button id="add-tab" type="button">Add Table to New Tab</button>
+    <button id="delete-all-tabs" type="button">Delete All Tabs</button>
+
+    <!-- Table display -->
+    <br>
+    <div class="table-container">
+        <table id="multiplication-table"></table>
+    </div>
+    
+    <!-- Tabbed interface -->
+     <div class="table-container">
+        <div id="tabs">
+            <ul>
+                <!-- Tabs will be dynamically added here -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Include necessary scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+</body>
